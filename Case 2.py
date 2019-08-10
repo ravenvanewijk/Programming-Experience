@@ -114,7 +114,7 @@ def multiplesamples(numberofbatches,interval,sampleamount, maxping):
 
         ax[i].set_xlabel("Ping time [ms] \nThe mean is: "+ mean+ " [ms], and the stdev is: "+stdev+" [ms]")
         ax[i].set_ylabel("Number of occurrences")
-        i+               = 1
+        i               += 1
         
         
         print("Batch number "+str(i)+" completed")
