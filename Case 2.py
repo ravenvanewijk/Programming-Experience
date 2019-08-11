@@ -103,7 +103,7 @@ def multiplesamples(numberofbatches,interval,sampleamount, maxping):
         sample(sampleamount)
         storedsamples[i] = sample(sampleamount)
         discrete[i], x[i]= plot(storedsamples[i])
-        ax[i].bar(discrete[i],x[i],)
+        ax[i].bar(discrete[i],x[i],np.std(discrete[i])/len(x[i]))
         plt.tight_layout()
         counter          = str(i+1)
         ax[i].set_title("Batch number "+ counter+ ' Sample obtained at: '+ strftime("%Y-%m-%d %H:%M:%S", gmtime()))
